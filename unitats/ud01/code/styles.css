@@ -1,0 +1,17 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 40rem;
+  margin: 3rem auto;
+  padding: 1rem;
+}
+
+#valor {
+  font-size: 3rem;
+  color: darkblue;
+}
+
+/* button:hover {
+  background-color: blck;
+  color: white;
+  transform: scale(1.05);
+} */

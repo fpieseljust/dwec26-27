@@ -1,0 +1,3070 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Material del mòdul de Desenvolupament d'Aplicacions Web en Entorn Client — DAM, IES Jaume II 'El Just'">
+      
+      
+      
+      
+        <link rel="prev" href="../../../info/criteris/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.59">
+    
+    
+      
+        <title>UD 1 - DWEC 26-27 — Desenvolupament d'Aplicacions Web en Entorn Client</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.5da3a30f.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/modern/palette.812a03bb.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CFira+Code:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navegació"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-ud-1-introduccio-al-desenvolupament-en-entorn-client" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="../../.." title="DWEC 26-27 — Desenvolupament d&#x27;Aplicacions Web en Entorn Client" class="md-header__button md-logo" aria-label="DWEC 26-27 — Desenvolupament d'Aplicacions Web en Entorn Client" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-code-2" viewBox="0 0 24 24"><path d="m18 16 4-4-4-4M6 8l-4 4 4 4M14.5 4l-5 16"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navegació">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DWEC 26-27 — Desenvolupament d'Aplicacions Web en Entorn Client
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UD 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Canviar a mode fosc"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode fosc" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Canviar a mode clar"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Canviar a mode clar" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Cerca">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Cerca">
+  <button type="button" class="md-search__button">
+    Cerca
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="DWEC 26-27 — Desenvolupament d&#x27;Aplicacions Web en Entorn Client" class="md-nav__button md-logo" aria-label="DWEC 26-27 — Desenvolupament d'Aplicacions Web en Entorn Client" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-code-2" viewBox="0 0 24 24"><path d="m18 16 4-4-4-4M6 8l-4 4 4 4M14.5 4l-5 16"/></svg>
+
+    </a>
+    DWEC 26-27 — Desenvolupament d'Aplicacions Web en Entorn Client
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-code-2" viewBox="0 0 24 24"><path d="m18 16 4-4-4-4M6 8l-4 4 4 4M14.5 4l-5 16"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+  Inici
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Informació
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Informació
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../info/guia_alumne_DWEC/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+  Guia de l'alumne
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../info/objectius/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+  Objectius i resultats
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../info/criteris/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-check-square" viewBox="0 0 24 24"><path d="M21 10.656V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12.344"/><path d="m9 11 3 3L22 4"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+  Criteris d'avaluació
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Unitats
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  Unitats
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+  UD 1
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+  UD 1
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.1. Índex
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-arquitectura-clientserver" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.2. Arquitectura client/server
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2. Arquitectura client&#x2f;server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-flux-duna-peticio-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.2.1. Flux d'una petició web
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-models-dexecucio-de-codi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.2.2. Models d'execució de codi
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-capacitats-del-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.2.3. Capacitats del navegador
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-que-es-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.3. Què és JavaScript
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3. Què és JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-caracteristiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.3.1. Característiques
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.3.2. Versions
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-javascript-no-es-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.3.3. JavaScript no és Java
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-com-integrar-javascript-a-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.4. Com integrar JavaScript a HTML
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4. Com integrar JavaScript a HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-script-inline-no-recomanat" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.4.1. Script inline (no recomanat)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-script-extern-recomanat" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.4.2. Script extern (recomanat)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-atributs-importants" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.4.3. Atributs importants
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-consola-del-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.5. Consola del navegador
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5. Consola del navegador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-obrir-la-consola" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.5.1. Obrir la consola
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-comandes-basiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.5.2. Comandes bàsiques
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153-alertes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.5.3. Alertes
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-depuracio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6. Depuració
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6. Depuració">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-objectius" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.1. Objectius
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-que-significa-depurar" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.2. Què significa depurar?
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.2. Què significa depurar?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1621-exemple" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.2.1. Exemple
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163-preparar-un-projecte-senzill" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.3. Preparar un projecte senzill
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.3. Preparar un projecte senzill">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1631-indexhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.3.1. <code>index.html</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1632-stylescss" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.3.2. <code>styles.css</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1633-scriptjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.3.3. <code>script.js</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#164-depurar-amb-les-eines-del-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.4. Depurar amb les eines del navegador
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.4. Depurar amb les eines del navegador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1641-obrir-les-eines" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.4.1. Obrir les eines
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1642-panells-principals" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.4.2. Panells principals
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#165-depurar-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.5. Depurar HTML
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.5. Depurar HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1651-que-cal-comprovar" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.5.1. Què cal comprovar?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1652-inspeccionar-el-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.5.2. Inspeccionar el DOM
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1653-exemple-derror" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.5.3. Exemple d’error
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1654-fonts-diferents" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.5.4. Fonts diferents
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#166-depurar-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.6. Depurar CSS
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.6. Depurar CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1661-inspeccionar-estils" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.6.1. Inspeccionar estils
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1662-problemes-habituals" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.6.2. Problemes habituals
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.6.2. Problemes habituals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#16621-selector-incorrecte" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.6.2.1. Selector incorrecte
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16622-propietat-sobreescrita" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.6.2.2. Propietat sobreescrita
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16623-model-de-caixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.6.2.3. Model de caixes
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16624-estils-que-depenen-de-lestat" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.6.2.4. Estils que depenen de l’estat
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#167-depurar-javascript-amb-la-consola" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.7. Depurar JavaScript amb la consola
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.7. Depurar JavaScript amb la consola">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1671-missatges-utils" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.7.1. Missatges útils
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1672-errors-frequents" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.7.2. Errors freqüents
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.7.2. Errors freqüents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#16721-element-inexistent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.7.2.1. Element inexistent
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16722-fitxer-no-trobat" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.7.2.2. Fitxer no trobat
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16723-variable-no-definida" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.7.2.3. Variable no definida
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#168-punts-dinterrupcio-al-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.8. Punts d’interrupció al navegador
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.8. Punts d’interrupció al navegador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1681-procediment" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.8.1. Procediment
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1682-controls-principals" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.8.2. Controls principals
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1683-que-observar" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.8.3. Què observar?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1684-debugger" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.8.4. <code>debugger</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#169-depurar-amb-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.9. Depurar amb VS Code
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.9. Depurar amb VS Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1691-preparacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.9.1. Preparació
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1692-posar-un-breakpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.9.2. Posar un breakpoint
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1693-controls-de-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.9.3. Controls de VS Code
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1694-breakpoints-condicionals" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.9.4. Breakpoints condicionals
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1695-logpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.9.5. Logpoints
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1610-errors-de-xarxa-i-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.10. Errors de xarxa i recursos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1611-metode-sistematic-de-depuracio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.11. Mètode sistemàtic de depuració
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1612-exercici-guiat" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.12. Exercici guiat
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.12. Exercici guiat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#16121-tasques" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.12.1. Tasques
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1613-llista-de-comprovacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.13. Llista de comprovació
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.13. Llista de comprovació">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#16131-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.13.1. HTML
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16132-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.13.2. CSS
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16133-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.13.3. JavaScript
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16134-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.13.4. Recursos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1615-idea-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.15. Idea final
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-tasca" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.7. Tasca
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.1. Índex
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-arquitectura-clientserver" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.2. Arquitectura client/server
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2. Arquitectura client&#x2f;server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-flux-duna-peticio-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.2.1. Flux d'una petició web
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-models-dexecucio-de-codi" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.2.2. Models d'execució de codi
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-capacitats-del-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.2.3. Capacitats del navegador
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-que-es-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.3. Què és JavaScript
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3. Què és JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-caracteristiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.3.1. Característiques
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.3.2. Versions
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-javascript-no-es-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.3.3. JavaScript no és Java
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-com-integrar-javascript-a-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.4. Com integrar JavaScript a HTML
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4. Com integrar JavaScript a HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-script-inline-no-recomanat" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.4.1. Script inline (no recomanat)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-script-extern-recomanat" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.4.2. Script extern (recomanat)
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-atributs-importants" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.4.3. Atributs importants
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-consola-del-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.5. Consola del navegador
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5. Consola del navegador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-obrir-la-consola" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.5.1. Obrir la consola
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-comandes-basiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.5.2. Comandes bàsiques
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153-alertes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.5.3. Alertes
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-depuracio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6. Depuració
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6. Depuració">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-objectius" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.1. Objectius
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-que-significa-depurar" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.2. Què significa depurar?
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.2. Què significa depurar?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1621-exemple" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.2.1. Exemple
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163-preparar-un-projecte-senzill" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.3. Preparar un projecte senzill
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.3. Preparar un projecte senzill">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1631-indexhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.3.1. <code>index.html</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1632-stylescss" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.3.2. <code>styles.css</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1633-scriptjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.3.3. <code>script.js</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#164-depurar-amb-les-eines-del-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.4. Depurar amb les eines del navegador
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.4. Depurar amb les eines del navegador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1641-obrir-les-eines" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.4.1. Obrir les eines
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1642-panells-principals" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.4.2. Panells principals
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#165-depurar-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.5. Depurar HTML
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.5. Depurar HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1651-que-cal-comprovar" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.5.1. Què cal comprovar?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1652-inspeccionar-el-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.5.2. Inspeccionar el DOM
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1653-exemple-derror" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.5.3. Exemple d’error
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1654-fonts-diferents" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.5.4. Fonts diferents
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#166-depurar-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.6. Depurar CSS
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.6. Depurar CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1661-inspeccionar-estils" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.6.1. Inspeccionar estils
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1662-problemes-habituals" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.6.2. Problemes habituals
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.6.2. Problemes habituals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#16621-selector-incorrecte" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.6.2.1. Selector incorrecte
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16622-propietat-sobreescrita" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.6.2.2. Propietat sobreescrita
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16623-model-de-caixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.6.2.3. Model de caixes
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16624-estils-que-depenen-de-lestat" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.6.2.4. Estils que depenen de l’estat
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#167-depurar-javascript-amb-la-consola" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.7. Depurar JavaScript amb la consola
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.7. Depurar JavaScript amb la consola">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1671-missatges-utils" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.7.1. Missatges útils
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1672-errors-frequents" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.7.2. Errors freqüents
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.7.2. Errors freqüents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#16721-element-inexistent" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.7.2.1. Element inexistent
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16722-fitxer-no-trobat" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.7.2.2. Fitxer no trobat
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16723-variable-no-definida" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.7.2.3. Variable no definida
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#168-punts-dinterrupcio-al-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.8. Punts d’interrupció al navegador
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.8. Punts d’interrupció al navegador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1681-procediment" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.8.1. Procediment
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1682-controls-principals" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.8.2. Controls principals
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1683-que-observar" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.8.3. Què observar?
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1684-debugger" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.8.4. <code>debugger</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#169-depurar-amb-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.9. Depurar amb VS Code
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.9. Depurar amb VS Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1691-preparacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.9.1. Preparació
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1692-posar-un-breakpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.9.2. Posar un breakpoint
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1693-controls-de-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.9.3. Controls de VS Code
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1694-breakpoints-condicionals" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.9.4. Breakpoints condicionals
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1695-logpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.9.5. Logpoints
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1610-errors-de-xarxa-i-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.10. Errors de xarxa i recursos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1611-metode-sistematic-de-depuracio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.11. Mètode sistemàtic de depuració
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1612-exercici-guiat" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.12. Exercici guiat
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.12. Exercici guiat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#16121-tasques" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.12.1. Tasques
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1613-llista-de-comprovacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.13. Llista de comprovació
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6.13. Llista de comprovació">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#16131-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.13.1. HTML
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16132-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.13.2. CSS
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16133-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.13.3. JavaScript
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16134-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.13.4. Recursos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1615-idea-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.6.15. Idea final
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-tasca" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        1.7. Tasca
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="1-ud-1-introduccio-al-desenvolupament-en-entorn-client">1. UD 1 · Introducció al desenvolupament en entorn client<a class="headerlink" href="#1-ud-1-introduccio-al-desenvolupament-en-entorn-client" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Resultat d'aprenentatge:</strong> RA 1 — Selecciona arquitectures i tecnologies de programació sobre clients web, identificant i analitzant les capacitats i característiques de cadascuna.</p>
+<p><strong>Objectiu:</strong> Entendre com funcionen les aplicacions web i les tecnologies que hi intervenen.</p>
+</blockquote>
+<h2 id="11-index">1.1. Índex<a class="headerlink" href="#11-index" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Arquitectura client/server</li>
+<li>Què és JavaScript</li>
+<li>Com integrar JavaScript a HTML</li>
+<li>Consola del navegador</li>
+<li>Tasca</li>
+</ol>
+<h2 id="12-arquitectura-clientserver">1.2. Arquitectura client/server<a class="headerlink" href="#12-arquitectura-clientserver" title="Permanent link">&para;</a></h2>
+<p>Una aplicació web funciona amb una arquitectura <strong>client/server</strong>:</p>
+<ul>
+<li><strong>Client</strong>: el navegador web (Chrome, Firefox, Safari...) que executa codi HTML, CSS i JavaScript</li>
+<li><strong>Servidor</strong>: un ordinador remot que emmagatzema i serveix dades (fitxers, bases de dades...)</li>
+</ul>
+<h3 id="121-flux-duna-peticio-web">1.2.1. Flux d'una petició web<a class="headerlink" href="#121-flux-duna-peticio-web" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Usuari → Navegador (Client) → Petició HTTP → Servidor → Resposta → Navegador → Renderitza
+</span></code></pre></div>
+<h3 id="122-models-dexecucio-de-codi">1.2.2. Models d'execució de codi<a class="headerlink" href="#122-models-dexecucio-de-codi" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>On s'executa</th>
+<th>Avantatges</th>
+<th>Inconvenients</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Client</strong></td>
+<td>Al navegador</td>
+<td>Ràpid, interactiu, sense recàrregues</td>
+<td>Menys accés a fitxers, dependència del navegador</td>
+</tr>
+<tr>
+<td><strong>Servidor</strong></td>
+<td>Al servidor</td>
+<td>Accés complet al sistema</td>
+<td>Més lent, recàrregues de pàgina</td>
+</tr>
+</tbody>
+</table>
+<h3 id="123-capacitats-del-navegador">1.2.3. Capacitats del navegador<a class="headerlink" href="#123-capacitats-del-navegador" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Executar JavaScript</li>
+<li>Renderitzar HTML i CSS</li>
+<li>Emmagatzemar dades localment (localStorage, cookies)</li>
+<li>Comunicar-se amb servidors (fetch, AJAX)</li>
+<li>Accedir a APIs del dispositiu (càmera, geolocalització...)</li>
+</ul>
+<h2 id="13-que-es-javascript">1.3. Què és JavaScript<a class="headerlink" href="#13-que-es-javascript" title="Permanent link">&para;</a></h2>
+<p>JavaScript és el <strong>únic llenguatge de programació</strong> que els navegadors executen nativament.</p>
+<h3 id="131-caracteristiques">1.3.1. Característiques<a class="headerlink" href="#131-caracteristiques" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Interpretat</strong>: s'executa línia a línia (no cal compilar)</li>
+<li><strong>Basat en events</strong>: respon a accions de l'usuari</li>
+<li><strong>Multi-paradigma</strong>: procedural, orientat a objectes, funcional</li>
+<li><strong>Dinàmic</strong>: les variables no tenen tipus fix</li>
+<li><strong>Asíncron</strong>: pot executar tasques sense bloquejar</li>
+</ul>
+<h3 id="132-versions">1.3.2. Versions<a class="headerlink" href="#132-versions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>ES5</strong> (2009): versió clàssica, encara compatible</li>
+<li><strong>ES6/ES2015</strong>: modernització important (let, const, classes, arrow functions, modules)</li>
+<li><strong>ES2016+</strong>: actualitzacions anuals amb noves funcionalitats</li>
+</ul>
+<h3 id="133-javascript-no-es-java">1.3.3. JavaScript no és Java<a class="headerlink" href="#133-javascript-no-es-java" title="Permanent link">&para;</a></h3>
+<p>Tot i el nom, són llenguatges completament diferents:</p>
+<table>
+<thead>
+<tr>
+<th>Aspecte</th>
+<th>JavaScript</th>
+<th>Java</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compilació</td>
+<td>Interpretat</td>
+<td>Compilat</td>
+</tr>
+<tr>
+<td>Execució</td>
+<td>Navegador</td>
+<td>JVM</td>
+</tr>
+<tr>
+<td>Tipus</td>
+<td>Dinàmic</td>
+<td>Estàtic</td>
+</tr>
+<tr>
+<td>Paradigma</td>
+<td>Funcional + OO</td>
+<td>OO</td>
+</tr>
+</tbody>
+</table>
+<h2 id="14-com-integrar-javascript-a-html">1.4. Com integrar JavaScript a HTML<a class="headerlink" href="#14-com-integrar-javascript-a-html" title="Permanent link">&para;</a></h2>
+<h3 id="141-script-inline-no-recomanat">1.4.1. Script inline (no recomanat)<a class="headerlink" href="#141-script-inline-no-recomanat" title="Permanent link">&para;</a></h3>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"alert('Hola!')"</span><span class="p">&gt;</span>Clica'm<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<h3 id="142-script-extern-recomanat">1.4.2. Script extern (recomanat)<a class="headerlink" href="#142-script-extern-recomanat" title="Permanent link">&para;</a></h3>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>La meva primera app<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hola món<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"app.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// app.js</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"El fitxer s'ha carregat!"</span><span class="p">);</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"h1"</span><span class="p">).</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Hola des de JavaScript!"</span><span class="p">;</span>
+</span></code></pre></div>
+<h3 id="143-atributs-importants">1.4.3. Atributs importants<a class="headerlink" href="#143-atributs-importants" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>defer</code>: executa el script després de parsejar l'HTML (al final del <code>&lt;head&gt;</code>)</li>
+<li><code>async</code>: executa el script tan aviat com es descarrega</li>
+</ul>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"app.js"</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Recomanació</p>
+<p>Utilitza sempre <code>defer</code> o col·loca el <code>&lt;script&gt;</code> al final del <code>&lt;body&gt;</code>.</p>
+</div>
+<h2 id="15-consola-del-navegador">1.5. Consola del navegador<a class="headerlink" href="#15-consola-del-navegador" title="Permanent link">&para;</a></h2>
+<p>La consola és l'eina de depuració més important.</p>
+<h3 id="151-obrir-la-consola">1.5.1. Obrir la consola<a class="headerlink" href="#151-obrir-la-consola" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Chrome/Firefox</strong>: <code>F12</code> → pestanya "Console"</li>
+<li><strong>Comanda ràpida</strong>: <code>Ctrl + Shift + J</code></li>
+</ul>
+<h3 id="152-comandes-basiques">1.5.2. Comandes bàsiques<a class="headerlink" href="#152-comandes-basiques" title="Permanent link">&para;</a></h3>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// Missatge a la consola</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Hola món"</span><span class="p">);</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1">// Missatge d'error</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">"Alguna cosa ha fallat"</span><span class="p">);</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1">// Taula de dades</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">table</span><span class="p">([{</span><span class="w"> </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="s2">"Ana"</span><span class="p">,</span><span class="w"> </span><span class="nx">edat</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="s2">"Pere"</span><span class="p">,</span><span class="w"> </span><span class="nx">edat</span><span class="o">:</span><span class="w"> </span><span class="mf">22</span><span class="w"> </span><span class="p">}]);</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1">// Netar la consola</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="nx">console</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="c1">// Mesurar temps</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="nx">console</span><span class="p">.</span><span class="nx">time</span><span class="p">(</span><span class="s2">"bucle"</span><span class="p">);</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">1000000</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="nx">console</span><span class="p">.</span><span class="nx">timeEnd</span><span class="p">(</span><span class="s2">"bucle"</span><span class="p">);</span>
+</span></code></pre></div>
+<h3 id="153-alertes">1.5.3. Alertes<a class="headerlink" href="#153-alertes" title="Permanent link">&para;</a></h3>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">// Missatge emergent</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nx">alert</span><span class="p">(</span><span class="s2">"Benvingut!"</span><span class="p">);</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1">// Confirmació</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="kd">let</span><span class="w"> </span><span class="nx">confirmat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">confirm</span><span class="p">(</span><span class="s2">"Vols continuar?"</span><span class="p">);</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1">// Entrada de dades</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="kd">let</span><span class="w"> </span><span class="nx">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">"Com et dius?"</span><span class="p">);</span>
+</span></code></pre></div>
+<h2 id="16-depuracio">1.6. Depuració<a class="headerlink" href="#16-depuracio" title="Permanent link">&para;</a></h2>
+<h3 id="161-objectius">1.6.1. Objectius<a class="headerlink" href="#161-objectius" title="Permanent link">&para;</a></h3>
+<p>En acabar aquesta guia sabràs:</p>
+<ul>
+<li>Identificar errors d’HTML, CSS i JavaScript.</li>
+<li>Utilitzar les eines de desenvolupador del navegador.</li>
+<li>Posar punts d’interrupció i executar JavaScript pas a pas.</li>
+<li>Depurar una pàgina web des de Visual Studio Code.</li>
+<li>Aplicar un mètode ordenat per trobar i corregir errors.</li>
+</ul>
+<blockquote>
+<p><strong>Idea clau:</strong> depurar no és provar coses a l’atzar. És observar què passa seguint la traça del programa, formular una hipòtesi, fer una prova i comprovar el resultat.</p>
+</blockquote>
+<p>HTML estructura el contingut, CSS defineix l’aparença i JavaScript afegeix comportament i interactivitat.</p>
+<hr />
+<h3 id="162-que-significa-depurar">1.6.2. Què significa depurar?<a class="headerlink" href="#162-que-significa-depurar" title="Permanent link">&para;</a></h3>
+<p>Depurar és el procés de localitzar, entendre i corregir errors d’un programa.</p>
+<p>Un error pot ser:</p>
+<ul>
+<li><strong>De sintaxi:</strong> el navegador no entén una instrucció.</li>
+<li><strong>De lògica:</strong> el programa funciona, però fa una cosa incorrecta.</li>
+<li><strong>De dades:</strong> una variable conté un valor inesperat.</li>
+<li><strong>D’integració:</strong> dos fitxers o parts del programa no es comuniquen correctament.</li>
+<li><strong>Visual:</strong> la pàgina es veu malament, encara que no aparega cap error.</li>
+</ul>
+<h4 id="1621-exemple">1.6.2.1. Exemple<a class="headerlink" href="#1621-exemple" title="Permanent link">&para;</a></h4>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">preu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">quantitat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">preu</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">quantitat</span><span class="p">);</span><span class="w"> </span><span class="c1">// 13, però probablement volíem 30</span>
+</span></code></pre></div>
+<p>El codi és vàlid, però la lògica no és la que esperàvem:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">preu</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">quantitat</span><span class="p">);</span><span class="w"> </span><span class="c1">// 30</span>
+</span></code></pre></div>
+<hr />
+<h3 id="163-preparar-un-projecte-senzill">1.6.3. Preparar un projecte senzill<a class="headerlink" href="#163-preparar-un-projecte-senzill" title="Permanent link">&para;</a></h3>
+<p>Crea una carpeta amb aquests tres fitxers:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>projecte-web/
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>├── index.html
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>├── styles.css
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>└── script.js
+</span></code></pre></div>
+<h4 id="1631-indexhtml">1.6.3.1. <code>index.html</code><a class="headerlink" href="#1631-indexhtml" title="Permanent link">&para;</a></h4>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="cp">&lt;!doctype html&gt;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"ca"</span><span class="p">&gt;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"viewport"</span> <span class="na">content</span><span class="o">=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="p">&gt;</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Exemple de depuració<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"styles.css"</span><span class="p">&gt;</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>  <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Comptador<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">"valor"</span><span class="p">&gt;</span>0<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">"incrementar"</span><span class="p">&gt;</span>Incrementar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>  <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"script.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<h4 id="1632-stylescss">1.6.3.2. <code>styles.css</code><a class="headerlink" href="#1632-stylescss" title="Permanent link">&para;</a></h4>
+<div class="language-css highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">system-ui</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="kt">rem</span><span class="p">;</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">rem</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="p">}</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="p">#</span><span class="nn">valor</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">rem</span><span class="p">;</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">darkblue</span><span class="p">;</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<h4 id="1633-scriptjs">1.6.3.3. <code>script.js</code><a class="headerlink" href="#1633-scriptjs" title="Permanent link">&para;</a></h4>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">valorElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#valor'</span><span class="p">);</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">botoElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#incrementar'</span><span class="p">);</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="kd">let</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="nx">botoElement</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">  </span><span class="nx">valor</span><span class="o">++</span><span class="p">;</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">  </span><span class="nx">valorElement</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">valor</span><span class="p">;</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Valor actual:'</span><span class="p">,</span><span class="w"> </span><span class="nx">valor</span><span class="p">);</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="p">});</span>
+</span></code></pre></div>
+<p>Obri <code>index.html</code> amb el navegador i comprova que el botó incrementa el número.</p>
+<hr />
+<h3 id="164-depurar-amb-les-eines-del-navegador">1.6.4. Depurar amb les eines del navegador<a class="headerlink" href="#164-depurar-amb-les-eines-del-navegador" title="Permanent link">&para;</a></h3>
+<p>Els navegadors moderns incorporen eines de desenvolupador per inspeccionar la pàgina carregada, el DOM, els estils i l’execució de JavaScript.</p>
+<h4 id="1641-obrir-les-eines">1.6.4.1. Obrir les eines<a class="headerlink" href="#1641-obrir-les-eines" title="Permanent link">&para;</a></h4>
+<p>Pots obrir-les de diverses maneres:</p>
+<ul>
+<li>Clic dret sobre la pàgina i selecciona <strong>Inspecciona</strong>.</li>
+<li>Prem <code>F12</code>.</li>
+<li>Prem <code>Ctrl + Shift + I</code> en Windows o Linux.</li>
+<li>Prem <code>Cmd + Option + I</code> en macOS.</li>
+</ul>
+<p>Els noms exactes poden variar segons el navegador.</p>
+<h4 id="1642-panells-principals">1.6.4.2. Panells principals<a class="headerlink" href="#1642-panells-principals" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Panell</th>
+<th>Utilitat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Elements o Inspector</td>
+<td>Examinar i modificar l’HTML i el CSS del DOM actual.</td>
+</tr>
+<tr>
+<td>Console</td>
+<td>Consultar errors i executar JavaScript.</td>
+</tr>
+<tr>
+<td>Sources o Debugger</td>
+<td>Veure fitxers, posar breakpoints i executar pas a pas.</td>
+</tr>
+<tr>
+<td>Network</td>
+<td>Comprovar peticions, fitxers que no carreguen i respostes del servidor.</td>
+</tr>
+<tr>
+<td>Application/Storage</td>
+<td>Inspeccionar cookies, localStorage i altres dades.</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>Analitzar el rendiment de la pàgina.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="165-depurar-html">1.6.5. Depurar HTML<a class="headerlink" href="#165-depurar-html" title="Permanent link">&para;</a></h3>
+<h4 id="1651-que-cal-comprovar">1.6.5.1. Què cal comprovar?<a class="headerlink" href="#1651-que-cal-comprovar" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Les etiquetes estan ben tancades.</li>
+<li>Els elements estan dins del lloc correcte.</li>
+<li>Els atributs tenen el nom i el valor correctes.</li>
+<li>Els identificadors (<code>id</code>) són únics.</li>
+<li>Els fitxers CSS i JavaScript estan ben enllaçats.</li>
+<li>Els elements que JavaScript busca existeixen realment.</li>
+</ul>
+<h4 id="1652-inspeccionar-el-dom">1.6.5.2. Inspeccionar el DOM<a class="headerlink" href="#1652-inspeccionar-el-dom" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Obri les eines de desenvolupador.</li>
+<li>Entra en el panell <strong>Elements</strong> o <strong>Inspector</strong>.</li>
+<li>Utilitza el selector d’elements.</li>
+<li>Fes clic sobre el component que vols estudiar.</li>
+<li>Observa l’estructura HTML que el navegador ha construït.</li>
+</ol>
+<p>El DOM és la representació en memòria de la pàgina que el navegador està utilitzant. No sempre coincideix exactament amb el text original del fitxer HTML.</p>
+<h4 id="1653-exemple-derror">1.6.5.3. Exemple d’error<a class="headerlink" href="#1653-exemple-derror" title="Permanent link">&para;</a></h4>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">"incrementar"</span><span class="p">&gt;</span>Incrementar<span class="p">&lt;/</span><span class="nt">buton</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>L’etiqueta de tancament és incorrecta. Cal escriure:</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">"incrementar"</span><span class="p">&gt;</span>Incrementar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<h4 id="1654-fonts-diferents">1.6.5.4. Fonts diferents<a class="headerlink" href="#1654-fonts-diferents" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Veure codi font:</strong> mostra el document original rebut pel navegador.</li>
+<li><strong>Inspector/Elements:</strong> mostra el DOM actual, que pot haver estat modificat per JavaScript.</li>
+</ul>
+<p>Aquesta diferència és útil quan JavaScript afegeix, elimina o canvia elements.</p>
+<hr />
+<h3 id="166-depurar-css">1.6.6. Depurar CSS<a class="headerlink" href="#166-depurar-css" title="Permanent link">&para;</a></h3>
+<h4 id="1661-inspeccionar-estils">1.6.6.1. Inspeccionar estils<a class="headerlink" href="#1661-inspeccionar-estils" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Selecciona un element en el panell <strong>Elements</strong>.</li>
+<li>Mira les regles CSS aplicades.</li>
+<li>Observa les propietats ratllades: una altra regla té més prioritat.</li>
+<li>Desactiva temporalment propietats amb la casella corresponent.</li>
+<li>Modifica valors per experimentar.</li>
+</ol>
+<p>Els canvis fets des de l’inspector són temporals. Per conservar-los, copia’ls al fitxer CSS.</p>
+<h4 id="1662-problemes-habituals">1.6.6.2. Problemes habituals<a class="headerlink" href="#1662-problemes-habituals" title="Permanent link">&para;</a></h4>
+<h5 id="16621-selector-incorrecte">1.6.6.2.1. Selector incorrecte<a class="headerlink" href="#16621-selector-incorrecte" title="Permanent link">&para;</a></h5>
+<div class="language-css highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="p">#</span><span class="nn">titol</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">"title"</span><span class="p">&gt;</span>Hola<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>Els identificadors no coincideixen: <code>titol</code> i <code>title</code> són diferents.</p>
+<h5 id="16622-propietat-sobreescrita">1.6.6.2.2. Propietat sobreescrita<a class="headerlink" href="#16622-propietat-sobreescrita" title="Permanent link">&para;</a></h5>
+<div class="language-css highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">}</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="p">#</span><span class="nn">valor</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">darkblue</span><span class="p">;</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>En aquest cas, el selector amb <code>id</code> sol tenir més especificitat i guanya.</p>
+<h5 id="16623-model-de-caixes">1.6.6.2.3. Model de caixes<a class="headerlink" href="#16623-model-de-caixes" title="Permanent link">&para;</a></h5>
+<p>En inspeccionar un element, observa:</p>
+<ul>
+<li><code>content</code>: contingut.</li>
+<li><code>padding</code>: espai interior.</li>
+<li><code>border</code>: vora.</li>
+<li><code>margin</code>: espai exterior.</li>
+</ul>
+<p>Si un element ocupa més o menys espai del que esperaves, revisa aquestes quatre zones.</p>
+<h5 id="16624-estils-que-depenen-de-lestat">1.6.6.2.4. Estils que depenen de l’estat<a class="headerlink" href="#16624-estils-que-depenen-de-lestat" title="Permanent link">&para;</a></h5>
+<p>Per provar estats com <code>:hover</code> o <code>:focus</code>, força’ls des de l’inspector. Això permet estudiar un botó encara que el ratolí no estiga damunt.</p>
+<div class="admonition tip">
+<p class="admonition-title">Forçar estat</p>
+<p>Pots afegir el següent codi als estils per comprovar la funcionalitat dels estats:
+<div class="language-css highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nt">button</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="n">blck</span><span class="p">;</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">    </span><span class="k">transform</span><span class="p">:</span><span class="w"> </span><span class="nb">scale</span><span class="p">(</span><span class="mf">1.05</span><span class="p">);</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="p">}</span>
+</span></code></pre></div></p>
+</div>
+<hr />
+<h3 id="167-depurar-javascript-amb-la-consola">1.6.7. Depurar JavaScript amb la consola<a class="headerlink" href="#167-depurar-javascript-amb-la-consola" title="Permanent link">&para;</a></h3>
+<p>El panell <strong>Console</strong> mostra missatges, avisos i errors. També permet executar expressions JavaScript directament.</p>
+<h4 id="1671-missatges-utils">1.6.7.1. Missatges útils<a class="headerlink" href="#1671-missatges-utils" title="Permanent link">&para;</a></h4>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'El programa ha arribat ací'</span><span class="p">);</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s1">'Aquest valor és inesperat'</span><span class="p">);</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">'No s’ha pogut completar l’operació'</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Per estudiar valors:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">({</span><span class="w"> </span><span class="nx">valor</span><span class="p">,</span><span class="w"> </span><span class="nx">valorElement</span><span class="p">,</span><span class="w"> </span><span class="nx">botoElement</span><span class="w"> </span><span class="p">});</span>
+</span></code></pre></div>
+<p>Això és més informatiu que escriure molts missatges separats.</p>
+<div class="admonition warning">
+<p class="admonition-title">Ús de missatges per depurar</p>
+<p>Els missatges de consola són útils, però no haurien de substituir:</p>
+<ul>
+<li>Els punts d’interrupció.</li>
+<li>L’execució pas a pas.</li>
+<li>La inspecció de variables.</li>
+<li>La lectura dels errors.</li>
+<li>Les proves automàtiques.</li>
+<li>La validació de dades.</li>
+</ul>
+<p>En producció es deurien evitar si no son estrictament necessaris.</p>
+</div>
+<h4 id="1672-errors-frequents">1.6.7.2. Errors freqüents<a class="headerlink" href="#1672-errors-frequents" title="Permanent link">&para;</a></h4>
+<h5 id="16721-element-inexistent">1.6.7.2.1. Element inexistent<a class="headerlink" href="#16721-element-inexistent" title="Permanent link">&para;</a></h5>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">boto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#boto-inexistent'</span><span class="p">);</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="nx">boto</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{});</span>
+</span></code></pre></div>
+<p>Si no existeix l’element, <code>boto</code> val <code>null</code> i apareixerà un error semblant a:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Cannot read properties of null
+</span></code></pre></div>
+<p>Solució: comprova que l’<code>id</code> coincideix i que el script s’executa després de carregar l’HTML.</p>
+<h5 id="16722-fitxer-no-trobat">1.6.7.2.2. Fitxer no trobat<a class="headerlink" href="#16722-fitxer-no-trobat" title="Permanent link">&para;</a></h5>
+<p>Si el navegador mostra un error <code>404</code> o no executa el codi, revisa:</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"script.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>El nom, les majúscules i la ubicació han de coincidir exactament.</p>
+<h5 id="16723-variable-no-definida">1.6.7.2.3. Variable no definida<a class="headerlink" href="#16723-variable-no-definida" title="Permanent link">&para;</a></h5>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">total</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Si <code>total</code> no s’ha declarat, apareixerà un <code>ReferenceError</code>.</p>
+<hr />
+<h3 id="168-punts-dinterrupcio-al-navegador">1.6.8. Punts d’interrupció al navegador<a class="headerlink" href="#168-punts-dinterrupcio-al-navegador" title="Permanent link">&para;</a></h3>
+<p>Un breakpoint pausa l’execució en una línia concreta. Això permet observar l’estat del programa abans que continue.</p>
+<h4 id="1681-procediment">1.6.8.1. Procediment<a class="headerlink" href="#1681-procediment" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Obri <strong>Sources</strong> o <strong>Debugger</strong>.</li>
+<li>Localitza <code>script.js</code>.</li>
+<li>Fes clic en el número de línia on vols pausar l’execució.</li>
+<li>Torna a la pàgina i provoca l’acció, per exemple, fes clic al botó.</li>
+<li>Quan el programa es pause, inspecciona les variables.</li>
+</ol>
+<h4 id="1682-controls-principals">1.6.8.2. Controls principals<a class="headerlink" href="#1682-controls-principals" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Resume:</strong> continua fins al pròxim breakpoint.</li>
+<li><strong>Step over:</strong> executa la línia actual sense entrar en les funcions.</li>
+<li><strong>Step into:</strong> entra dins de la funció que es crida.</li>
+<li><strong>Step out:</strong> ix de la funció actual.</li>
+<li><strong>Restart:</strong> reinicia l’execució.</li>
+</ul>
+<h4 id="1683-que-observar">1.6.8.3. Què observar?<a class="headerlink" href="#1683-que-observar" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Valors de les variables.</li>
+<li>Call stack o pila de crides.</li>
+<li>Arguments de les funcions.</li>
+<li>Expressions en el panell d’observació.</li>
+<li>Elements del DOM abans i després del canvi.</li>
+</ul>
+<h4 id="1684-debugger">1.6.8.4. <code>debugger</code><a class="headerlink" href="#1684-debugger" title="Permanent link">&para;</a></h4>
+<p>També pots posar un punt d’interrupció directament al codi:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nx">botoElement</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">  </span><span class="k">debugger</span><span class="p">;</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">  </span><span class="nx">valor</span><span class="o">++</span><span class="p">;</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="w">  </span><span class="nx">valorElement</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">valor</span><span class="p">;</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="p">});</span>
+</span></code></pre></div>
+<p>Quan les eines de desenvolupador estan obertes, el navegador s’aturarà en aquesta línia.</p>
+<p>Recorda eliminar <code>debugger</code> quan acabes.</p>
+<hr />
+<h3 id="169-depurar-amb-vs-code">1.6.9. Depurar amb VS Code<a class="headerlink" href="#169-depurar-amb-vs-code" title="Permanent link">&para;</a></h3>
+<p>VS Code permet editar el projecte, executar-lo i connectar el depurador amb un navegador basat en Chromium. En projectes senzills, el navegador continua sent el lloc on s’executa la pàgina, mentre que VS Code ofereix una interfície integrada per treballar amb el codi.</p>
+<h4 id="1691-preparacio">1.6.9.1. Preparació<a class="headerlink" href="#1691-preparacio" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Obri la carpeta del projecte amb VS Code.</li>
+<li>Obri <code>index.html</code> i comprova els enllaços a CSS i JavaScript.</li>
+<li>Instal·la només les extensions que necessite el projecte. Per a HTML, CSS i JavaScript bàsic, sovint no cal cap extensió addicional.</li>
+<li>Inicia un servidor local si el projecte ho necessita.</li>
+</ol>
+<p>Per a una pàgina estàtica, pots utilitzar una extensió de servidor local o executar un servidor senzill des del terminal:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>python<span class="w"> </span>-m<span class="w"> </span>http.server<span class="w"> </span><span class="m">8000</span>
+</span></code></pre></div>
+<p>Després obri:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>http://localhost:8000
+</span></code></pre></div>
+<p>Un servidor local és preferible a obrir sempre el fitxer amb <code>file://</code>, especialment quan hi ha mòduls, peticions o recursos que requereixen HTTP.</p>
+<h4 id="1692-posar-un-breakpoint">1.6.9.2. Posar un breakpoint<a class="headerlink" href="#1692-posar-un-breakpoint" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Obri <code>script.js</code>.</li>
+<li>Fes clic a l’esquerra del número de línia.</li>
+<li>Apareixerà un punt roig.</li>
+<li>Obri la vista <strong>Run and Debug</strong>.</li>
+<li>Selecciona una configuració de navegador disponible.</li>
+<li>Prem <code>F5</code> o el botó d’inici.</li>
+<li>Interactua amb la pàgina fins que s’arribe al breakpoint.</li>
+</ol>
+<h4 id="1693-controls-de-vs-code">1.6.9.3. Controls de VS Code<a class="headerlink" href="#1693-controls-de-vs-code" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Funció</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Continue</td>
+<td>Continua l’execució.</td>
+</tr>
+<tr>
+<td>Step Over</td>
+<td>Executa la línia actual sense entrar en funcions.</td>
+</tr>
+<tr>
+<td>Step Into</td>
+<td>Entra en la funció cridada.</td>
+</tr>
+<tr>
+<td>Step Out</td>
+<td>Surt de la funció actual.</td>
+</tr>
+<tr>
+<td>Restart</td>
+<td>Reinicia la sessió de depuració.</td>
+</tr>
+<tr>
+<td>Stop</td>
+<td>Atura la sessió.</td>
+</tr>
+</tbody>
+</table>
+<p>La vista de depuració també mostra variables locals, expressions observades, call stack i punts d’interrupció.</p>
+<h4 id="1694-breakpoints-condicionals">1.6.9.4. Breakpoints condicionals<a class="headerlink" href="#1694-breakpoints-condicionals" title="Permanent link">&para;</a></h4>
+<p>Un breakpoint condicional només pausa si es compleix una condició.</p>
+<p>Exemple:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">valor</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Hem arribat a 10'</span><span class="p">);</span>
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>També pots establir la condició des del menú contextual del breakpoint. És útil quan un bucle s’executa moltes vegades i només t’interessa estudiar un cas concret.</p>
+<h4 id="1695-logpoints">1.6.9.5. Logpoints<a class="headerlink" href="#1695-logpoints" title="Permanent link">&para;</a></h4>
+<p>Un logpoint escriu informació sense pausar el programa. És una alternativa pràctica a afegir temporalment molts <code>console.log</code> al fitxer.</p>
+<hr />
+<h3 id="1610-errors-de-xarxa-i-recursos">1.6.10. Errors de xarxa i recursos<a class="headerlink" href="#1610-errors-de-xarxa-i-recursos" title="Permanent link">&para;</a></h3>
+<p>Quan una pàgina no funciona, revisa també el panell <strong>Network</strong>.</p>
+<p>Comprova:</p>
+<ul>
+<li>Si <code>styles.css</code> i <code>script.js</code> retornen l’estat <code>200</code>.</li>
+<li>Si hi ha errors <code>404</code>.</li>
+<li>Si una petició està bloquejada.</li>
+<li>Si el servidor retorna un tipus de contingut incorrecte.</li>
+<li>Si una petició tarda massa o falla.</li>
+</ul>
+<p>Un error típic és escriure:</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"style.css"</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>quan el fitxer real es diu <code>styles.css</code>.</p>
+<hr />
+<h3 id="1611-metode-sistematic-de-depuracio">1.6.11. Mètode sistemàtic de depuració<a class="headerlink" href="#1611-metode-sistematic-de-depuracio" title="Permanent link">&para;</a></h3>
+<p>Segueix sempre aquest ordre:</p>
+<ol>
+<li><strong>Reprodueix l’error.</strong> Descobreix quins passos el provoquen.</li>
+<li><strong>Descriu el comportament esperat.</strong> Què hauria de passar?</li>
+<li><strong>Descriu el comportament real.</strong> Què passa exactament?</li>
+<li><strong>Llig els missatges d’error.</strong> Comprova la consola i la xarxa.</li>
+<li><strong>Redueix el problema.</strong> Elimina temporalment parts que no siguen necessàries.</li>
+<li><strong>Inspecciona valors.</strong> Utilitza <code>console.log</code>, breakpoints o expressions observades.</li>
+<li><strong>Formula una hipòtesi.</strong> Per exemple: “el selector no troba l’element”.</li>
+<li><strong>Fes un únic canvi.</strong> Així sabràs què ha solucionat el problema.</li>
+<li><strong>Torna a provar.</strong> Comprova també que no has introduït un error nou.</li>
+<li><strong>Neteja el codi.</strong> Elimina missatges de prova i breakpoints innecessaris.</li>
+</ol>
+<blockquote>
+<p>Canviar moltes coses alhora dificulta saber quin canvi ha funcionat.</p>
+</blockquote>
+<hr />
+<h3 id="1612-exercici-guiat">1.6.12. Exercici guiat<a class="headerlink" href="#1612-exercici-guiat" title="Permanent link">&para;</a></h3>
+<p>Modifica el projecte perquè tinga un error intencionat:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">valorElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#valor'</span><span class="p">);</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">botoElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#incrementar'</span><span class="p">);</span>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="kd">let</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>
+</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="nx">botoElement</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-30-7"><a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a><span class="w">  </span><span class="nx">valor</span><span class="o">++</span><span class="p">;</span>
+</span><span id="__span-30-8"><a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a><span class="w">  </span><span class="nx">valorElement</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">valor</span><span class="p">;</span>
+</span><span id="__span-30-9"><a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Valor actual:'</span><span class="p">,</span><span class="w"> </span><span class="nx">valor</span><span class="p">);</span>
+</span><span id="__span-30-10"><a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a><span class="p">});</span>
+</span></code></pre></div>
+<p>Canvia l’HTML així:</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">"comptador"</span><span class="p">&gt;</span>0<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>Ara el botó deixarà de funcionar perquè JavaScript busca <code>#valor</code>, però l’HTML conté <code>#comptador</code>.</p>
+<h4 id="16121-tasques">1.6.12.1. Tasques<a class="headerlink" href="#16121-tasques" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Reprodueix l’error fent clic al botó.</li>
+<li>Llig el missatge de la consola.</li>
+<li>Afig aquest missatge abans del listener:</li>
+</ol>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">({</span><span class="w"> </span><span class="nx">valorElement</span><span class="p">,</span><span class="w"> </span><span class="nx">botoElement</span><span class="w"> </span><span class="p">});</span>
+</span></code></pre></div>
+<ol>
+<li>Comprova quin element val <code>null</code>.</li>
+<li>Corregeix l’<code>id</code> de l’HTML o el selector de JavaScript.</li>
+<li>Posa un breakpoint dins de la funció del clic.</li>
+<li>Verifica el valor de <code>valor</code> pas a pas.</li>
+<li>Elimina els missatges de diagnòstic que ja no necessites.</li>
+</ol>
+<hr />
+<h3 id="1613-llista-de-comprovacio">1.6.13. Llista de comprovació<a class="headerlink" href="#1613-llista-de-comprovacio" title="Permanent link">&para;</a></h3>
+<h4 id="16131-html">1.6.13.1. HTML<a class="headerlink" href="#16131-html" title="Permanent link">&para;</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Les etiquetes estan ben tancades.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Els <code>id</code> coincideixen amb els selectors JavaScript i CSS.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Els fitxers estan en la ubicació correcta.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> El DOM conté els elements esperats.</li>
+</ul>
+<h4 id="16132-css">1.6.13.2. CSS<a class="headerlink" href="#16132-css" title="Permanent link">&para;</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> El selector coincideix amb l’element.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> La propietat no està ratllada per una altra regla.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> La mida i l’espaiat són correctes.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> S’han revisat <code>margin</code>, <code>padding</code>, <code>border</code> i <code>box-sizing</code>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> S’han comprovat els estats <code>:hover</code> i <code>:focus</code>.</li>
+</ul>
+<h4 id="16133-javascript">1.6.13.3. JavaScript<a class="headerlink" href="#16133-javascript" title="Permanent link">&para;</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> No hi ha errors rojos en la consola.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Les variables tenen el valor esperat.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Els elements seleccionats no són <code>null</code>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Els esdeveniments estan connectats.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Les funcions s’executen en l’ordre correcte.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Els breakpoints confirmen el flux del programa.</li>
+</ul>
+<h4 id="16134-recursos">1.6.13.4. Recursos<a class="headerlink" href="#16134-recursos" title="Permanent link">&para;</a></h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Els fitxers carreguen amb estat <code>200</code>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> No hi ha errors <code>404</code>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Les rutes respecten majúscules i minúscules.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> El servidor local està funcionant.</li>
+</ul>
+<hr />
+<h3 id="1615-idea-final">1.6.15. Idea final<a class="headerlink" href="#1615-idea-final" title="Permanent link">&para;</a></h3>
+<p>Les eines de desenvolupador no substitueixen el raonament: ajuden a observar el programa. Un bon procés de depuració combina una descripció precisa del problema, una hipòtesi verificable i proves petites i controlades.</p>
+<h2 id="17-tasca">1.7. Tasca<a class="headerlink" href="#17-tasca" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Pràctica 1.1 — Entorn de desenvolupament</p>
+<p>Configura l'entorn de desenvolupament:</p>
+<ol>
+<li>Instal·la Visual Studio Code</li>
+<li>Instal·la les extensions: <strong>Live Server</strong>, <strong>ESLint</strong>, <strong>Prettier</strong></li>
+<li>Crea una carpeta <code>dwec</code> al teu ordinador</li>
+<li>Crea un fitxer <code>index.html</code> amb estructura HTML5 completa</li>
+<li>Crea un fitxer <code>app.js</code> connectat amb <code>defer</code></li>
+<li>A <code>app.js</code>, escriu <code>console.log("Primera línia de codi!")</code></li>
+<li>Obre el fitxer amb Live Server i comprova que apareix a la consola</li>
+</ol>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Pràctica 1.2 —Explorant la consola</p>
+<p>Obre la consola del navegador i executa:</p>
+<ol>
+<li>Un <code>alert()</code> amb el teu nom</li>
+<li>Un <code>console.log()</code> amb el teu cognom</li>
+<li>Un <code>console.table()</code> amb una llista de 3 els teus professors preferits (objectes amb <code>nom</code> i <code>assignatura</code>)</li>
+<li>Un <code>confirm()</code> que pregunti si ets alumne del cicle</li>
+<li>Un <code>prompt()</code> que demani el teu nom i després el mostri amb <code>console.log()</code></li>
+</ol>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Pràctica 1.3 — Primera pàgina web interactiva</p>
+<p>Crea una pàgina web <code>index.html</code> amb:</p>
+<ol>
+<li>Un títol <code>&lt;h1&gt;</code> amb el teu nom</li>
+<li>Un paràgraf <code>&lt;p&gt;</code> amb una descripció curta</li>
+<li>Un botó que, en ser clicat, canviï el text del títol a "Hola, [el teu nom]!"</li>
+<li>Un segon botó que, en ser clicat, canviï el color de fons de la pàgina</li>
+</ol>
+<p><strong>Requisits:</strong></p>
+<ul>
+<li>Tota la lògica ha d'estar a <code>app.js</code></li>
+<li>Utilitza <code>document.querySelector()</code> per seleccionar elements</li>
+<li>Utilitza事件 <code>addEventListener</code> per als botons</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Pràctica 1.4 - Crea una aplicació amb:</p>
+<ul>
+<li>Un camp de text.</li>
+<li>Un botó per afegir tasques.</li>
+<li>Una llista de tasques.</li>
+<li>Un botó per eliminar cada tasca.</li>
+</ul>
+<p>Introdueix deliberadament tres errors:</p>
+<ol>
+<li>Un selector CSS incorrecte.</li>
+<li>Un <code>id</code> que no coincideix entre HTML i JavaScript.</li>
+<li>Una operació lògica que produïsca un resultat incorrecte.</li>
+</ol>
+<p>Per a cada error, lliura:</p>
+<ul>
+<li>Una descripció del problema.</li>
+<li>El missatge o símptoma observat.</li>
+<li>L’eina utilitzada per trobar-lo.</li>
+<li>La correcció aplicada.</li>
+<li>Una captura o explicació del breakpoint, si n’has utilitzat un.</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Torna a l'inici
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Peu de pàgina" >
+        
+          
+          <a href="../../../info/criteris/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Criteris d&#x27;avaluació">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Criteris d'avaluació
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["content.code.annotate","content.code.copy","navigation.footer","navigation.sections","navigation.top","search.highlight"],"search":"../../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copiat al porta-retalls","clipboard.copy":"Còpia al porta-retalls","search.result.more.one":"1 més en aquesta pàgina","search.result.more.other":"# més en aquesta pàgina","search.result.none":"Cap document coincideix","search.result.one":"1 document coincident","search.result.other":"# documents coincidents","search.result.placeholder":"Escriu per a començar a cercar","search.result.term.missing":"Desaparegut","select.version":"Selecciona la versió"},"version":null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.6970bfe9.min.js"></script>
+      
+    
+  </body>
+</html>
