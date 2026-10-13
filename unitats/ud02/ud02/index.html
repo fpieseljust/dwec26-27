@@ -2463,15 +2463,20 @@
 <h2 id="10-tasca-totes-amb-nodejs">10. Tasca (totes amb nodejs)<a class="headerlink" href="#10-tasca-totes-amb-nodejs" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Pràctica 2.1 — Calculadora</p>
-<p>Crea una calculadora amb les operacions bàsiques (suma, resta, multiplicació, divisió). Utilitza <code>readline</code> per demanar els números i <code>console.log()</code> per mostrar el resultat.</p>
+<p>Crea una calculadora amb les operacions bàsiques (suma, resta, multiplicació, divisió). Utilitza <code>readline</code> per demanar les operacions i els números, i <code>console.log()</code> per mostrar el resultat.</p>
 <div class="admonition example">
 <p class="admonition-title">Ús de readline</p>
-<p>import readline from "node:readline/promises";
-import { stdin as input, stdout as output } from "node:process";</p>
-<p>const rl = readline.createInterface({ input, output });</p>
-<p>const nom = await rl.question("Com et dius? ");</p>
-<p>console.log(<code>Hola, ${nom}!</code>);</p>
-<p>rl.close();</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">readline</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"node:readline/promises"</span><span class="p">;</span>
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">stdin</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">input</span><span class="p">,</span><span class="w"> </span><span class="nx">stdout</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">output</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"node:process"</span><span class="p">;</span>
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>
+</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">rl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">readline</span><span class="p">.</span><span class="nx">createInterface</span><span class="p">({</span><span class="w"> </span><span class="nx">input</span><span class="p">,</span><span class="w"> </span><span class="nx">output</span><span class="w"> </span><span class="p">});</span>
+</span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>
+</span><span id="__span-34-6"><a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a><span class="kd">const</span><span class="w"> </span><span class="nx">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">rl</span><span class="p">.</span><span class="nx">question</span><span class="p">(</span><span class="s2">"Com et dius? "</span><span class="p">);</span>
+</span><span id="__span-34-7"><a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a>
+</span><span id="__span-34-8"><a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Hola, </span><span class="si">${</span><span class="nx">nom</span><span class="si">}</span><span class="sb">!`</span><span class="p">);</span>
+</span><span id="__span-34-9"><a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a>
+</span><span id="__span-34-10"><a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a><span class="nx">rl</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+</span></code></pre></div>
 </div>
 </div>
 <div class="admonition note">
@@ -2492,8 +2497,22 @@ import { stdin as input, stdout as output } from "node:process";</p>
 <li>Utilitza una classe <code>Contacte</code> i una classe <code>GestorContactes</code></li>
 <li>Emmagatzema els contactes en un array</li>
 <li>Utilitza <code>JSON.parse()</code> i <code>JSON.stringify()</code> per desar/recuperar de l'arxiu contactes.json</li>
-<li>Tota la interacció és per consola (<code>prompt</code>, <code>alert</code>)</li>
+<li>Tota la interacció és per consola</li>
 </ul>
+<div class="admonition example">
+<p class="admonition-title">Lectura i escriptura d'arxius des de node</p>
+<p>Per a llegir i guardar arxius des de node, fem ús del mòdul fs (file system) de node i les funcions readFileSync i writeFileSync.
+<div class="language-js highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">fs</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"node:fs"</span><span class="p">;</span>
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="nx">path</span><span class="p">,</span><span class="w"> </span><span class="s2">"utf-8"</span><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>
+</span><span id="__span-35-5"><a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a><span class="nx">fs</span><span class="p">.</span><span class="nx">writeFileSync</span><span class="p">(</span>
+</span><span id="__span-35-6"><a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a><span class="w">    </span><span class="nx">path</span><span class="p">,</span>
+</span><span id="__span-35-7"><a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a><span class="w">    </span><span class="nx">content</span><span class="p">,</span>
+</span><span id="__span-35-8"><a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a><span class="w">    </span><span class="s2">"utf-8"</span>
+</span><span id="__span-35-9"><a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a><span class="p">);</span>
+</span></code></pre></div></p>
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Pràctica 2.4 — Biblioteca de funcions</p>

@@ -1,5 +1,5 @@
 const valorElement = document.querySelector('#valor');
-const botoElement = document.querySelector('#incrementar');
+const botoElement = document.getElementById('incrementar');
 
 let valor = 0;
 
