@@ -1,0 +1,4 @@
+[
+  { "id": 101, "codi": "DWEC", "nom": "Desenvolupament Web en Entorn Client", "curs": "2n", "modul": "DWEC" },
+  { "id": 102, "codi": "DIW", "nom": "Disseny d'Interfícies Web", "curs": "2n", "modul": "DIW" }
+]

@@ -1,0 +1,4 @@
+[
+  { "id": 10, "nom": "Joan", "cognoms": "Serra", "assignaturesImpartides": [101] },
+  { "id": 11, "nom": "Anna", "cognoms": "Roca", "assignaturesImpartides": [102] }
+]
